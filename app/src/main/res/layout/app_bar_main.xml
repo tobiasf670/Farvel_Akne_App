@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/lib/com.example.farvel.farvel_akne"
+    xmlns:design="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.farvel.farvel_akne.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:layout_weight="1"/>
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="510dp"
+            android:layout_weight="3"></FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/material_blue_grey_950"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:paddingBottom="-10dp"
+            >
+
+            <Button
+
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="false"
+                android:layout_marginRight="-10dp"
+                android:layout_weight="1"
+                android:background="@drawable/onclick"
+                android:drawableTop="@drawable/ic_besked"
+                android:text="beskeder"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:drawablePadding="-5dp"
+
+                />
+
+            <Button
+                android:id="@+id/button2"
+                android:drawablePadding="-5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="-10dp"
+                android:layout_weight="1"
+                android:background="@drawable/onclick"
+                android:drawableTop="@drawable/ic_behandling"
+                android:text="Behandling"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <Button
+                android:drawablePadding="-5dp"
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/onclick"
+                android:drawableTop="@drawable/ic_profil"
+                android:text="Profil"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.DrawerLayout>

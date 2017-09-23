@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.farvel.farvel_akne.TakePicFragment"
+    android:orientation="vertical"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    >
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Take Picture"
+        android:id="@+id/buttonpic"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/image_view_take_pic1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/image_view_take_pic2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/image_view_take_pic3"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

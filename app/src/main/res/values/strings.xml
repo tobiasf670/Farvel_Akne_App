@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Farvel_Akne</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="Planets">
+        <item>Besked 1</item>
+        <item>Besked 2</item>
+        <item>Besked 3</item>
+        <item>Besked 4</item>
+        <item>Besked 5</item>
+        <item>Besked 6</item>
+        <item>Besked 7</item>
+        <item>Besked 8</item>
+        <item>Besked 9</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
