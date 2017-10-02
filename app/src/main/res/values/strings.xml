@@ -5,6 +5,36 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="question1">1) Er du allergisk overfor medicin (fx. penicllin)?</string>
+    <string name="question2">2) Bruger du medicin til dagligt?</string>
+    <string name="question3">3) Har du andre sygdomme? (fx. Hjertekarsygdomme, Diabetes, Stofskifte)</string>
+    <string name="question4">4) Er der nogle i din familie der lider af akne?</string>
+    <string name="question5">5) Ryger du?</string>
+    <string name="question6">6) Hvor stort er dit alkoholforbrug?</string>
+    <string name="question7">7) Har du noget af følgende:</string>
+    <string name="question8">8) Hvor er dit akne lokaliseret:</string>
+    <string name="question9">9) Hvor længe har du haft akne:</string>
+    <string name="question10">10) Hvilken slags akne har du:</string>
+    <string name="question11">11) Hvor udtalt er dit akne:</string>
+    <string name="question12">12) Får du lige nu behandling for akne</string>
+    <string name="question13">13) Ønsker du at fortsætte behandlingen?</string>
+    <string name="question14">14) Er der noget af følgende, der gør sig gældende ved dig:</string>
+    <string name="question15">15) Hvilke af følgende behandlinger er du villig til at prøve:</string>
+    <string name="question16">16) Øvrig information:</string>
+    <string name="edittext_question1">Hvis ja, skriv hvilken medicin du ikke kan tåle her</string>
+
+
+    <string name="camera_permission_confirmation">This app demonstrates the usage of CameraView. In order to do that, it needs permission to access camera.</string>
+    <string name="camera_permission_not_granted">Camera app cannot do anything without camera permission.</string>
+    <string name="picture_taken">Picture taken</string>
+    <string name="aspect_ratio">Aspect ratio</string>
+    <string name="switch_flash">Switch flash</string>
+    <string name="switch_camera">Switch camera</string>
+    <string name="flash_auto">Flash auto</string>
+    <string name="flash_off">Flash off</string>
+    <string name="flash_on">Flash on</string>
+
+
     <string name="action_settings">Settings</string>
     <string-array name="Planets">
         <item>Besked 1</item>

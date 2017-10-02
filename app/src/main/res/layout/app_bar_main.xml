@@ -23,7 +23,7 @@
         android:layout_weight="1"/>
 
         <FrameLayout
-            android:id="@+id/content_frame"
+            android:id="@+id/content_frame1"
             android:layout_width="match_parent"
             android:layout_height="510dp"
             android:layout_weight="3"></FrameLayout>

@@ -3,6 +3,7 @@ package com.example.farvel.farvel_akne;
 import android.app.ListFragment;
 import android.os.Bundle;
 
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,6 @@ public class IndboxFragment extends ListFragment implements OnItemClickListener 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
         Toast.makeText(getActivity(), "Item: " + position, Toast.LENGTH_SHORT).show();
-        getFragmentManager().beginTransaction().replace(R.id.content_frame, new Messages()).commit();
+        getFragmentManager().beginTransaction().replace(R.id.content_frame1, new Messages()).commit();
     }
 }

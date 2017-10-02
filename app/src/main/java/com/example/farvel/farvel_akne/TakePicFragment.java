@@ -1,34 +1,30 @@
 package com.example.farvel.farvel_akne;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.hardware.Camera;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.app.Fragment;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
-import android.view.Surface;
-import android.view.SurfaceHolder;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import net.gotev.uploadservice.MultipartUploadRequest;
+import net.gotev.uploadservice.UploadNotificationConfig;
 
 import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.UUID;
 
 
 public class TakePicFragment extends Fragment {
 
-    Button button;
+    Button button, sendBTN;
     ImageView imageView1,imageView2,imageView3,imageView0;
     View myView;
     static final int CAM_REQUEST = 1;
@@ -39,6 +35,18 @@ public class TakePicFragment extends Fragment {
         ((MainActivity)getActivity()).setColorOnBtn(R.layout.fragment_take_pic);
 
        button = (Button) myView.findViewById(R.id.buttonpic);
+
+        sendBTN = (Button) myView.findViewById(R.id.sendBTN);
+        sendBTN.setVisibility(View.GONE);
+        sendBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                uploadMultipart();
+                //getFragmentManager().beginTransaction().replace(R.id.content_frame1, new QuestionnaireFragment()).addToBackStack(null).commit();
+
+            }
+        });
+
         imageView0 = (ImageView) myView.findViewById(R.id.image_view_take_pic_face0);
         imageView1 = (ImageView) myView.findViewById(R.id.image_view_take_pic_face1);
         imageView2 = (ImageView) myView.findViewById(R.id.image_view_take_pic_face2);
@@ -80,7 +88,8 @@ public void getNewPic( int i){
                     imageView0.requestLayout();
                     imageView0.setImageDrawable(Drawable.createFromPath(path));
                     imageView0.setBackgroundResource(android.R.color.transparent);
-                    getNewPic(1);
+                   // getNewPic(1);
+                    changeButton();
                     break;
                 case 1:
                     path = "sdcard/camera_app/cam_image1.jpg";
@@ -89,7 +98,7 @@ public void getNewPic( int i){
                     imageView1.requestLayout();
                     imageView1.setImageDrawable(Drawable.createFromPath(path));
                     imageView1.setBackgroundResource(android.R.color.transparent);
-                  getNewPic(2);
+                  //getNewPic(2);
                     break;
                 case 2:
                     path = "sdcard/camera_app/cam_image2.jpg";
@@ -98,7 +107,7 @@ public void getNewPic( int i){
                     imageView2.requestLayout();
                     imageView2.setImageDrawable(Drawable.createFromPath(path));
                     imageView2.setBackgroundResource(android.R.color.transparent);
-                    getNewPic(3);
+                    //getNewPic(3);
                     break;
                 case 3:
                     path = "sdcard/camera_app/cam_image3.jpg";
@@ -107,6 +116,7 @@ public void getNewPic( int i){
                     imageView3.requestLayout();
                     imageView3.setImageDrawable(Drawable.createFromPath(path));
                     imageView3.setBackgroundResource(android.R.color.transparent);
+                    changeButton();
                     break;
                 default:
                     break;
@@ -128,6 +138,36 @@ public void getNewPic( int i){
 
         return image_file;
 
+    }
+
+    public  void changeButton (){
+        button.setVisibility(View.GONE);
+        sendBTN.setVisibility(View.VISIBLE);
+
+    }
+
+    public void uploadMultipart() {
+        //getting name for the image
+        String name = "Tobias";
+
+        //getting the actual path of the image
+        String path = "sdcard/camera_app/cam_image0.jpg";
+
+        //Uploading code
+        try {
+            String uploadId = UUID.randomUUID().toString();
+
+            //Creating a multi part request
+            new MultipartUploadRequest(getActivity().getApplicationContext(), uploadId, Constants.UPLOAD_URL)
+                    .addFileToUpload(path, "image") //Adding file
+                    .addParameter("name", name) //Adding text parameter to the request
+                    .setNotificationConfig(new UploadNotificationConfig())
+                    .setMaxRetries(2)
+                    .startUpload(); //Starting the upload
+
+        } catch (Exception exc) {
+            Toast.makeText(getActivity().getApplicationContext(), exc.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

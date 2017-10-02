@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -25,27 +26,33 @@ private Button btn1,btn2,btn3;
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Farvel Akne");
         toolbar.setTitleTextColor(getResources().getColor(R.color.colorAccent));
-        getFragmentManager().beginTransaction().replace(R.id.content_frame, new NewKonsulationFragment()).commit();
+        getFragmentManager().beginTransaction().replace(R.id.content_frame1, new NewKonsulationFragment()).commit();
         btn1 = (Button) findViewById(R.id.button);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getFragmentManager().beginTransaction().replace(R.id.content_frame, new IndboxFragment()).commit();
-            }
+                if(!(getFragmentManager().findFragmentById(R.id.content_frame1).getClass().equals(IndboxFragment.class))) {
+                    getFragmentManager().beginTransaction().replace(R.id.content_frame1, new IndboxFragment()).addToBackStack(null).commit();
+                }
+                }
         });
         btn2 = (Button) findViewById(R.id.button2);
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getFragmentManager().beginTransaction().replace(R.id.content_frame, new BehandlingFragment()).commit();
+                if(!(getFragmentManager().findFragmentById(R.id.content_frame1).getClass().equals(BehandlingFragment.class))) {
+                    getFragmentManager().beginTransaction().replace(R.id.content_frame1, new BehandlingFragment()).addToBackStack(null).commit();
+                }
             }
         });
         btn3 = (Button) findViewById(R.id.button3);
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getFragmentManager().beginTransaction().replace(R.id.content_frame, new ProfilFragment()).commit();
+                if(!(getFragmentManager().findFragmentById(R.id.content_frame1).getClass().equals(ProfilFragment.class))) {
+                    getFragmentManager().beginTransaction().replace(R.id.content_frame1, new ProfilFragment()).addToBackStack(null).commit();
+                }
             }
         });
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -119,14 +126,31 @@ private Button btn1,btn2,btn3;
 
 
         if (id == R.id.nav_first_layout) {
-            fragmentManger.beginTransaction().replace(R.id.content_frame, new ProfilFragment()).commit();
+
+            if(!(getFragmentManager().findFragmentById(R.id.content_frame1).getClass().equals(NewKonsulationFragment.class))){
+                fragmentManger.beginTransaction().replace(R.id.content_frame1, new NewKonsulationFragment()).addToBackStack(null).commit();
+
+        }else {
+            Toast.makeText(this, "Du er allerede på Min Ny Konsulation", Toast.LENGTH_SHORT).show();}
+
             // Handle the camera action
         } else if (id == R.id.nav_secound_layout) {
-            fragmentManger.beginTransaction().replace(R.id.content_frame, new IndboxFragment()).commit();
+            if(!(getFragmentManager().findFragmentById(R.id.content_frame1).getClass().equals(IndboxFragment.class))){
+                fragmentManger.beginTransaction().replace(R.id.content_frame1, new IndboxFragment()).addToBackStack(null).commit();
+
+        }else {
+            Toast.makeText(this, "Du er allerede på Min Beskeder", Toast.LENGTH_SHORT).show();}
+
+           // fragmentManger.beginTransaction().replace(R.id.content_frame, new IndboxFragment()).addToBackStack(null).commit();
 
         } else if (id == R.id.nav_third_layout) {
+            if(!(getFragmentManager().findFragmentById(R.id.content_frame1).getClass().equals(BehandlingFragment.class))){
+                fragmentManger.beginTransaction().replace(R.id.content_frame1, new BehandlingFragment()).addToBackStack(null).commit();
 
-            fragmentManger.beginTransaction().replace(R.id.content_frame, new BehandlingFragment()).commit();
+        }else {
+            Toast.makeText(this, "Du er allerede på Min BehandlingFragment", Toast.LENGTH_SHORT).show();}
+
+
 
 
         } else if (id == R.id.nav_send) {
@@ -137,8 +161,6 @@ private Button btn1,btn2,btn3;
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
 
 
 }
