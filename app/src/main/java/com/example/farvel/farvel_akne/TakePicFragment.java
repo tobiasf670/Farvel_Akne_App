@@ -13,17 +13,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import net.gotev.uploadservice.MultipartUploadRequest;
-import net.gotev.uploadservice.UploadNotificationConfig;
 
 import java.io.File;
 import java.util.UUID;
 
 
 public class TakePicFragment extends Fragment {
-
+    String [] pathForImages = new String[4] ;
+    LinearLayout face;
     Button button, sendBTN;
     ImageView imageView1,imageView2,imageView3,imageView0;
     View myView;
@@ -34,6 +35,10 @@ public class TakePicFragment extends Fragment {
         myView = inflater.inflate(R.layout.fragment_take_pic,container,false);
         ((MainActivity)getActivity()).setColorOnBtn(R.layout.fragment_take_pic);
 
+        face = (LinearLayout) myView.findViewById(R.id.AnsigtLayout) ;
+
+
+
        button = (Button) myView.findViewById(R.id.buttonpic);
 
         sendBTN = (Button) myView.findViewById(R.id.sendBTN);
@@ -41,8 +46,8 @@ public class TakePicFragment extends Fragment {
         sendBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                uploadMultipart();
-                //getFragmentManager().beginTransaction().replace(R.id.content_frame1, new QuestionnaireFragment()).addToBackStack(null).commit();
+                uploadMultipart(pathForImages);
+                getFragmentManager().beginTransaction().replace(R.id.content_frame1, new QuestionnaireFragment()).addToBackStack(null).commit();
 
             }
         });
@@ -56,7 +61,20 @@ public class TakePicFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-           getNewPic(0);
+                if(imageView0.getDrawable() == null){
+                    getNewPic(0);
+                }
+                else if(imageView1.getDrawable() == null){
+                    getNewPic(1);
+                }
+                else if(imageView2.getDrawable() == null){
+                    getNewPic(2);
+                }
+                else if(imageView3.getDrawable() == null){
+                    getNewPic(3);
+                }
+
+
             }
         });
 
@@ -81,6 +99,7 @@ public void getNewPic( int i){
         if(resultCode == -1) {
             switch (requestCode) {
                 case 0:
+                    pathForImages[0] = "sdcard/camera_app/cam_image0.jpg";
                     path = "sdcard/camera_app/cam_image0.jpg";
 
                     imageView0.getLayoutParams().height = dimensionInDp;
@@ -88,28 +107,31 @@ public void getNewPic( int i){
                     imageView0.requestLayout();
                     imageView0.setImageDrawable(Drawable.createFromPath(path));
                     imageView0.setBackgroundResource(android.R.color.transparent);
-                   // getNewPic(1);
-                    changeButton();
+                   getNewPic(1);
+                    //changeButton();
                     break;
                 case 1:
+                    pathForImages[1] = "sdcard/camera_app/cam_image1.jpg";
                     path = "sdcard/camera_app/cam_image1.jpg";
                     imageView1.getLayoutParams().height = dimensionInDp;
                     imageView1.getLayoutParams().width = dimensionInDp;
                     imageView1.requestLayout();
                     imageView1.setImageDrawable(Drawable.createFromPath(path));
                     imageView1.setBackgroundResource(android.R.color.transparent);
-                  //getNewPic(2);
+                  getNewPic(2);
                     break;
                 case 2:
+                    pathForImages[2] = "sdcard/camera_app/cam_image2.jpg";
                     path = "sdcard/camera_app/cam_image2.jpg";
                     imageView2.getLayoutParams().height = dimensionInDp;
                     imageView2.getLayoutParams().width = dimensionInDp;
                     imageView2.requestLayout();
                     imageView2.setImageDrawable(Drawable.createFromPath(path));
                     imageView2.setBackgroundResource(android.R.color.transparent);
-                    //getNewPic(3);
+                    getNewPic(3);
                     break;
                 case 3:
+                    pathForImages[3] = "sdcard/camera_app/cam_image3.jpg";
                     path = "sdcard/camera_app/cam_image3.jpg";
                     imageView3.getLayoutParams().height = dimensionInDp;
                     imageView3.getLayoutParams().width = dimensionInDp;
@@ -117,6 +139,7 @@ public void getNewPic( int i){
                     imageView3.setImageDrawable(Drawable.createFromPath(path));
                     imageView3.setBackgroundResource(android.R.color.transparent);
                     changeButton();
+                    face.setBackgroundResource(R.drawable.allpicborder);
                     break;
                 default:
                     break;
@@ -146,27 +169,30 @@ public void getNewPic( int i){
 
     }
 
-    public void uploadMultipart() {
+    public void uploadMultipart( String [] pathImg) {
         //getting name for the image
         String name = "Tobias";
 
         //getting the actual path of the image
         String path = "sdcard/camera_app/cam_image0.jpg";
+        for(int i =0;i < pathImg.length;i++) {
 
-        //Uploading code
-        try {
-            String uploadId = UUID.randomUUID().toString();
 
-            //Creating a multi part request
-            new MultipartUploadRequest(getActivity().getApplicationContext(), uploadId, Constants.UPLOAD_URL)
-                    .addFileToUpload(path, "image") //Adding file
-                    .addParameter("name", name) //Adding text parameter to the request
-                    .setNotificationConfig(new UploadNotificationConfig())
-                    .setMaxRetries(2)
-                    .startUpload(); //Starting the upload
+            //Uploading code
+            try {
+                String uploadId = UUID.randomUUID().toString();
 
-        } catch (Exception exc) {
-            Toast.makeText(getActivity().getApplicationContext(), exc.getMessage(), Toast.LENGTH_SHORT).show();
+                //Creating a multi part request
+                new MultipartUploadRequest(getActivity().getApplicationContext(), uploadId, Constants.UPLOAD_URL)
+                        .addFileToUpload(pathImg[i], "image") //Adding file
+                        .addParameter("name", name) //Adding text parameter to the request
+                        //.setNotificationConfig(new UploadNotificationConfig())
+                        .setMaxRetries(2)
+                        .startUpload(); //Starting the upload
+
+            } catch (Exception exc) {
+                Toast.makeText(getActivity().getApplicationContext(), exc.getMessage(), Toast.LENGTH_SHORT).show();
+            }
         }
     }
 

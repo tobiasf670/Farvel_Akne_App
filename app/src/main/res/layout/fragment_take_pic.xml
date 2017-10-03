@@ -26,51 +26,52 @@
             android:textColor="@color/colorAccent"/>
     </LinearLayout>
 <LinearLayout
+    android:id="@+id/AnsigtLayout"
     android:background="@drawable/customborder"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+   android:padding="10dp"
     android:weightSum="4"
     >
     <ImageView
-        android:src="@drawable/ic_camera"
-        android:background="@color/colorGray"
+
+        android:background="@drawable/ic_camera"
         android:layout_weight="1"
         android:id="@+id/image_view_take_pic_face0"
-        android:layout_width="50dp"
+        android:layout_width="40dp"
         android:layout_height="50dp"
         android:layout_gravity="center_vertical"
-
         android:layout_marginLeft="5dp"/>
+
     <ImageView
+
         android:layout_weight="1"
         android:id="@+id/image_view_take_pic_face1"
-        android:layout_width="50dp"
+        android:layout_width="40dp"
         android:layout_height="50dp"
         android:layout_gravity="center_vertical"
 
         android:layout_marginLeft="5dp"
-        android:src="@drawable/ic_camera"
-        android:background="@color/colorGray"/>
+
+        android:background="@drawable/ic_camera"></ImageView>
 
     <ImageView
-        android:src="@drawable/ic_camera"
-        android:background="@color/colorGray"
+        android:background="@drawable/ic_camera"
         android:layout_weight="1"
-        android:layout_width="50dp"
+        android:layout_width="40dp"
         android:layout_height="50dp"
         android:layout_gravity="center_vertical"
         android:id="@+id/image_view_take_pic_face2"
         android:layout_marginLeft="5dp"/>
     <ImageView
         android:layout_weight="1"
-        android:layout_width="50dp"
+        android:layout_width="40dp"
         android:layout_height="50dp"
         android:layout_gravity="center_vertical"
         android:id="@+id/image_view_take_pic_face3"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="3dp"
-        android:src="@drawable/ic_camera"
-        android:background="@color/colorGray"/>
+        android:background="@drawable/ic_camera"></ImageView>
 </LinearLayout>
 
     <LinearLayout
@@ -97,12 +98,12 @@
 
         <ImageView
             android:id="@+id/image_view_take_pic_bryst0"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:background="@color/colorGray"
-            android:src="@drawable/ic_camera" />
+            android:background="@drawable/ic_camera"
+             />
 
 
     </LinearLayout>
@@ -130,11 +131,10 @@
         <ImageView
             android:layout_weight="1"
             android:id="@+id/image_view_take_pic_ryg0"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_camera"
-            android:background="@color/colorGray"
+            android:background="@drawable/ic_camera"
            />
 
     </LinearLayout>

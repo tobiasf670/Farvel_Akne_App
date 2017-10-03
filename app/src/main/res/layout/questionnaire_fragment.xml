@@ -14,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:text="@string/question1"
             android:textSize="14sp"
             android:textStyle="bold" />
@@ -30,7 +31,7 @@
             <RadioButton
 
                 android:layout_marginLeft="10dp"
-                android:id="@+id/radioButton5"
+                android:id="@+id/radioButtonYesQ1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -38,7 +39,7 @@
 
             <RadioButton
                 android:layout_marginLeft="30dp"
-                android:id="@+id/radioButton4"
+                android:id="@+id/radioButtonNoQ1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -58,129 +59,752 @@
             android:background="#0095a8" />
 
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question2"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="90dp"
+            android:id="@+id/LinearLayout03"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            >
+
+            <RadioButton
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonYesQ2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="JA" />
+
+            <RadioButton
+                android:layout_marginLeft="30dp"
+                android:id="@+id/radioButtonNoQ2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="NEJ" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/edittext_question2"
+            android:textSize="16sp">
+
+        </EditText>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
 
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question3"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="90dp"
+            android:id="@+id/LinearLayout04"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            >
+
+            <RadioButton
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonYesQ3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="JA" />
+
+            <RadioButton
+                android:layout_marginLeft="30dp"
+                android:id="@+id/radioButtonNoQ3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="NEJ" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/edittext_question3"
+            android:textSize="16sp">
+
+        </EditText>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
 
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question4"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
 
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="90dp"
+            android:id="@+id/LinearLayout05"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            >
+
+            <RadioButton
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonYesQ4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="JA" />
+
+            <RadioButton
+                android:layout_marginLeft="30dp"
+                android:id="@+id/radioButtonNoQ4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="NEJ" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/edittext_question2"
+            android:textSize="16sp">
+
+        </EditText>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
+
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question5"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="90dp"
+            android:id="@+id/LinearLayout06"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            >
 
+            <RadioButton
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonYesQ5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="JA" />
+
+            <RadioButton
+                android:layout_marginLeft="30dp"
+                android:id="@+id/radioButtonNoQ5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="NEJ" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/edittext_question2"
+            android:textSize="16sp">
+
+        </EditText>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question6"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question6"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/LinearLayout07"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            >
+
+            <RadioButton
+
+                android:layout_marginLeft="5dp"
+                android:id="@+id/radioButtonNOQ6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Ingen" />
+
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonPartyQ6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Festlige lejligheder" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayilyQ6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Dagligt" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
 
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question7"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question7"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
 
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/LinearLayout09"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RadioButton
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButton1Q7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Hovedpine, Svimmelhed, Besvimelse" />
+
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonParty2Q7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Brystsmerter, Hjertebanken" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily3Q7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Åndenød, Hoste" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily4Q7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Eksem, Psoriasis" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily5Q7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Feber" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily6Q7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Nattesved" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily7Q7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Kvalme" />
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/edittext_question7"
+            android:textSize="16sp">
+
+        </EditText>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question8"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question8"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
 
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/LinearLayout08"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RadioButton
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButton1Q8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Ansigt" />
+
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonParty2Q8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Nakke" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily3Q8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Bryst" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily4Q8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Ryg" />
+
+        </LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/edittext_question8"
+            android:textSize="16sp">
+
+        </EditText>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
+
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question9"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question9"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/edittext_question9"
+            android:textSize="16sp">
+
+        </EditText>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
+
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question10"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question10"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
 
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/LinearLayout11"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RadioButton
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButton1Q10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Små sorte prikker" />
+
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonParty2Q10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Små hvide hudorme" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily3Q10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Røde bumser" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily4Q10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Større knuder/cyster" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
+
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question11"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question11"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/LinearLayout12"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            >
 
+            <RadioButton
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButton1Q11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Mildt" />
+
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonParty2Q11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Moderat" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily3Q11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Svært" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question12"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question12"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
 
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="90dp"
+            android:id="@+id/LinearLayout13"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            >
+
+            <RadioButton
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonYesQ12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="JA" />
+
+            <RadioButton
+                android:layout_marginLeft="30dp"
+                android:id="@+id/radioButtonNoQ12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="NEJ" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/edittext_question12"
+            android:textSize="16sp">
+
+        </EditText>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
+
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question13"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question13"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
 
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="90dp"
+            android:id="@+id/LinearLayout14"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            >
+
+            <RadioButton
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonYesQ13"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="JA" />
+
+            <RadioButton
+                android:layout_marginLeft="30dp"
+                android:id="@+id/radioButtonNoQ13"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="NEJ" />
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
+
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question14"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question14"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
 
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/LinearLayout15"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RadioButton
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButton1Q14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Bruger oliebaseret makeup" />
+
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonParty2Q14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Aknen forværres omkring menstruationens start" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily3Q14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Du bruger P-piller" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily4Q14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="P-piller har ingen effekt på aknen" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily5Q14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Du er gravid eller har graviditetsønske" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
+
         <TextView
+            android:layout_marginTop="10dp"
             android:id="@+id/question15"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:text="@string/question1"
+            android:text="@string/question15"
             android:textSize="14sp"
             android:textStyle="bold"></TextView>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="40dp"
+            android:id="@+id/LinearLayout16"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            >
+
+            <RadioButton
+
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButton1Q15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Lokalbehandling med crème" />
+
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonParty2Q15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Antibiotika (Langvarig behandling i 3-6 måneder)" />
+            <RadioButton
+                android:layout_marginLeft="10dp"
+                android:id="@+id/radioButtonDayily3Q15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Isotretionin (Hormonel behandling der kræver blodprøver samt negativ graviditetstest hos egen læge hver måned)" />
+            >
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/question16"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:text="@string/question16"
+            android:textSize="14sp"
+            android:textStyle="bold"></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/edittext_question12"
+            android:textSize="16sp">
+
+        </EditText>
+        <View
+
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#0095a8" />
     </LinearLayout>
 </ScrollView>

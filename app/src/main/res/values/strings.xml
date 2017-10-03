@@ -21,7 +21,23 @@
     <string name="question14">14) Er der noget af følgende, der gør sig gældende ved dig:</string>
     <string name="question15">15) Hvilke af følgende behandlinger er du villig til at prøve:</string>
     <string name="question16">16) Øvrig information:</string>
+
     <string name="edittext_question1">Hvis ja, skriv hvilken medicin du ikke kan tåle her</string>
+    <string name="edittext_question2">Hvis ja, skriv din medicinlist her</string>
+    <string name="edittext_question3">Hvis ja, uddyb</string>
+    <string name="edittext_question4">Hvis ja, hvem og hvilken sværhedsgrad</string>
+    <string name="edittext_question5">Hvis JA, hvor mange cigaretter ryger du til dagligt, og i hvor mange år</string>
+    <string name="edittext_question7">Ved kryds, venligst uddyb</string>
+    <string name="edittext_question8">Andre steder?</string>
+    <string name="edittext_question9">Angiv i antal dage, uger eller år</string>
+    <string name="edittext_question10">Hvis ja, skriv din medicinlist her</string>
+    <string name="edittext_question11">Hvis ja, skriv din medicinlist her</string>
+    <string name="edittext_question12">Hvis JA, hvilken behandling får du lige nu</string>
+    <string name="edittext_question13">Hvis ja, skriv din medicinlist her</string>
+    <string name="edittext_question14">Hvis ja, skriv din medicinlist her</string>
+    <string name="edittext_question15">Hvis ja, skriv din medicinlist her</string>
+    <string name="edittext_question16">Hvis ja, skriv din medicinlist her</string>
+
 
 
     <string name="camera_permission_confirmation">This app demonstrates the usage of CameraView. In order to do that, it needs permission to access camera.</string>
