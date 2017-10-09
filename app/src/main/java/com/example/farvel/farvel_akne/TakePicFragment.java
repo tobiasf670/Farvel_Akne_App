@@ -87,6 +87,9 @@ public void getNewPic( int i){
         Intent camera_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         File file = getFile(i);
         camera_intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
+    camera_intent.putExtra("android.intent.extras.CAMERA_FACING", android.hardware.Camera.CameraInfo.CAMERA_FACING_FRONT);
+    camera_intent.putExtra("android.intent.extras.LENS_FACING_FRONT", 1);
+    camera_intent.putExtra("android.intent.extra.USE_FRONT_CAMERA", true);
         startActivityForResult(camera_intent, i);
     }
 
