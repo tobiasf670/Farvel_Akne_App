@@ -1,16 +1,25 @@
 package com.example.farvel.farvel_akne;
 
 
+        import android.content.Context;
         import android.content.Intent;
+        import android.graphics.Color;
+        import android.graphics.Typeface;
+        import android.net.ConnectivityManager;
+        import android.net.NetworkInfo;
         import android.os.AsyncTask;
+        import android.os.Build;
         import android.os.Bundle;
+        import android.support.design.widget.Snackbar;
         import android.support.v7.app.AppCompatActivity;
         import android.text.TextUtils;
+        import android.view.Gravity;
         import android.view.View;
         import android.widget.EditText;
         import android.widget.ProgressBar;
         import android.widget.RadioButton;
         import android.widget.RadioGroup;
+        import android.widget.TextView;
         import android.widget.Toast;
 
         import org.json.JSONException;
@@ -30,12 +39,13 @@ public class testSignup extends AppCompatActivity {
         setContentView(R.layout.testsignup);
 
         //if the user is already logged in we will directly start the profile activity
+       /*
         if (SharedPrefManager.getInstance(this).isLoggedIn()) {
             finish();
             startActivity(new Intent(this, MainActivity.class));
             return;
         }
-
+*/
         editTextUsername = (EditText) findViewById(R.id.editTextUsername);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
@@ -45,6 +55,31 @@ public class testSignup extends AppCompatActivity {
         findViewById(R.id.buttonRegister).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Snackbar snackbar = Snackbar
+                        .make(findViewById(android.R.id.content), "INTERNET IKKE SLÅET TIL", Snackbar.LENGTH_LONG);
+
+                View snackBarView = snackbar.getView();
+                snackBarView.setBackgroundColor(Color.RED);
+                TextView mainTextView = (TextView) (snackBarView.findViewById(android.support.design.R.id.snackbar_text));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+
+
+                    mainTextView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+                } else {
+                    mainTextView.setGravity(Gravity.CENTER_HORIZONTAL);
+                    mainTextView.setGravity(Gravity.CENTER_HORIZONTAL);
+                }
+                mainTextView.setTypeface(null, Typeface.BOLD);
+
+                if(CheckNetwork.isInternetAvailable(testSignup.this)) //returns true if internet available
+                {
+
+                    //do something. loadwebview.
+                }
+                else
+                {
+                    snackbar.show();
+                }
                 //if user pressed on button register
                 //here we will register the user to server
                 registerUser();
